@@ -28,7 +28,7 @@ loop2:
 			addi s3, s3, 1	      #j = j+1
 			add t2, s4, s2	      #t0=size+i
 
-	      bge   s3, t2, loop1   #for(j < size+i )
+	      		bge   s3, t2, loop1   #for(j < size+i )
 			sub  t1, s4, s2	      #t1=size-i
 			addi t1, t1, 1        #t1=size-i+1
 			blt  s3, t1, printSpace	   #if (j < size - i+1)				
@@ -51,5 +51,5 @@ printSpace:
 			j loop2
 
 exit:
-    		li a7, 10
-    		ecall 
+    			li a7, 10
+    			ecall 
